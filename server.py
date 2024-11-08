@@ -10,11 +10,8 @@ def home(data):
         img = qrcode.make(data)
         img.save(f'./images/{data}.png')
         return send_file(f'./images/{data}.png', mimetype='image/png')
-    return send_file(f'./images/{data}.png', mimetype='image/png')
 
-@app.route('/hello/<name>')
-def hello(name):
-    return jsonify(message=f"Hello, {name}!")
+    return send_file(f'./images/{data}.png', mimetype='image/png')
 
 def search_files(directory, filename):
     for root, dirs, files in os.walk(directory):
