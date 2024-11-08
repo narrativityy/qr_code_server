@@ -23,6 +23,3 @@ Example: `curl http://localhost:5000/qr/https://github.com/your-username/your-re
 
 * The generated QR codes are saved in the [images/](cci:7://file:///Users/jakecrowley/Desktop/qr_code_server/images:0:0-0:0) directory.
 * If a QR code with the same data already exists, the existing one will be returned instead of generating a new one.
-
-[CursorSurroundingLines]
-</CursorSurroundingLines>
