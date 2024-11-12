@@ -4,8 +4,8 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/qr/<data>')
-def home(data):
+@app.route('/qr/<path:data>')
+def generate_qr(data):
     """
     Generate a QR code with the given data, save it to images/, and
     send it as a response.
@@ -24,6 +24,7 @@ def home(data):
         img = qrcode.make(data)
         # Save the QR code to images/
         img.save(f'./images/{data}.png')
+
         # Send the QR code as a response
         return send_file(f'./images/{data}.png', mimetype='image/png')
 
